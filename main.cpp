@@ -20,49 +20,49 @@ Pick two cities of your choice. Fill in the temperature for the 7 days of this w
 
 //Data Table
 
-//City X, Day X: Temp
+//City Miami, Day X: Temp
 
-City 1, Day 1: TEMP
+Miami, Day 1: 84
 
-City 1, Day 2: TEMP
+Miami, Day 2: 84
 
-City 1, Day 3: TEMP
+Miami, Day 3: 82
 
-City 1, Day 4: TEMP
+Miami, Day 4: 81
 
-City 1, Day 5: TEMP
+Miami, Day 5: 81
 
-City 1, Day 6: TEMP
+Miami, Day 6: 83
 
-City 1, Day 7: TEMP
+Miami, Day 7: 82
 
-City 2, Day 1: TEMP
+Dallas, Day 1: 81
 
-City 2, Day 2: TEMP
+Dallas, Day 2: 80
 
-City 2, Day 3: TEMP
+Dallas, Day 3: 81
 
-City 2, Day 4: TEMP
+Dallas, Day 4: 80
 
-City 2, Day 5: TEMP
+Dallas, Day 5: 77
 
-City 2, Day 6: TEMP
+Dallas, Day 6: 58
 
-City 2, Day 7: TEMP
+Dallas, Day 7: 56
 
 */
 
- 
+
 
 int main()
 
 {
 
-      const int CITY = 2;
+    const int CITY = 1;
 
-      const int WEEK = 7;
+    const int WEEK = 7;
 
- 
+
 
     int temperature[CITY][WEEK];
 
@@ -70,21 +70,36 @@ int main()
 
     cout << "Enter all temperature for a week of first city and then second city. \n";
 
- 
+
 
     // Inserting the values into the temperature array
 
     //note for every dimension of the array you need a for loop 2 dimensions = 2 for loops
 
-    for (int i = 0; i < CITY; ++i)
+    for (int i = 0; i < CITY; i++)
 
     {
 
-        for(int j = 0; j < WEEK; ++j)
+        for (int j = 0; j < WEEK; j++)
 
         {
 
-            cout << "City " << i + 1 << ", Day " << j + 1 << " : ";
+            cout << "Miami" << ", Day " << j + 1 << " : ";
+
+            cin >> temperature[i][j];
+
+        }
+
+    }
+    for (int i = 0; i < CITY; i++)
+
+    {
+
+        for (int j = 0; j < WEEK; j++)
+
+        {
+
+            cout << "Dallas" << ", Day " << j + 1 << " : ";
 
             cin >> temperature[i][j];
 
@@ -92,11 +107,13 @@ int main()
 
     }
 
- 
+
+
+
 
     cout << "\n\nDisplaying Values:\n";
 
- 
+
 
     // Accessing the values from the temperature array
 
@@ -104,33 +121,63 @@ int main()
 
     {
 
-        for(int j = 0; j < WEEK; ++j)
+        for (int j = 0; j < WEEK; ++j)
 
         {
 
-            cout << "City " << i + 1 << ", Day " << j + 1 << " = " << temperature[i][j] << endl;
+            cout << "Miami" << ", Day " << j + 1 << " = " << temperature[i][j] << endl;
 
         }
 
     }
+    for (int i = 0; i < CITY; ++i)
 
-   /*For up to 5 Points Extra Credit
+    {
 
-      Expand this program:
+        for (int j = 0; j < WEEK; ++j)
 
-      1. Create a one dimensional array, cityOne[7] to store the 7 temperatures of city 1, assume that value 0 represents day 1, 1 represents day 2....
+        {
 
-      2. Create a on dimensional array, cityTwo[7] to store the 7 temperatures of city 2 , assume that value 0 represents day 1, 1 represents day 2....
+            cout << "Dallas" << ", Day " << j + 1 << " = " << temperature[i][j] << endl;
 
-      3. Using a for loop (or nested for loop), feed the data of CityOne[] and CityTwo[] into temperature[i][j], where i is index of the City Number, and j is the index of the temp for the day.
+        }
 
-      4. print the results of temperature[i][j]; to the screen.
 
-    */
+    }
 
- 
+    int Miami[7] = { 84,84,82,81,81,83,82 };
+    for (int i = 0; i < 7; i++)
 
- 
+        cout << "Miami, Day-" << i << "=" << Miami[i] << "\n";
+
+    int Dallas[7] = {81,80,81,80,77,58,56};
+    for (int i = 0; i < 7; i++)
+
+        cout << "Dallas, Day-" << i << "=" << Dallas[i] << "\n";
+
+    /*For up to 5 Points Extra Credit
+
+       Expand this program:
+
+1.	Create a one dimensional array, cityOne[7] to store the 7 temperatures of city 1, assume that value 0 represents day 1, 1 represents day 2....
+
+
+
+        cout << "Miami " << i << "=" << Miami[i] << "\n";
+
+1.
+
+       2. Create a on dimensional array, cityTwo[7] to store the 7 temperatures of city 2 , assume that value 0 represents day 1, 1 represents day 2....
+
+       3. Using a for loop (or nested for loop), feed the data of CityOne[] and CityTwo[] into temperature[i][j], where i is index of the City Number, and j is the index of the temp for the day.
+
+       4. print the results of temperature[i][j]; to the screen.
+
+     */
+
+
+
+
 
     return 0;
 
